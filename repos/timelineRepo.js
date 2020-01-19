@@ -1,14 +1,16 @@
+require('dotenv').config()
+
 const { MongoClient } = require("mongodb");
 
 function timelineRepo() {
     function loadTimeline() {
         return new Promise(async (resolve, reject) => {
-            const client = new MongoClient('mongodb://localhost:27017');
+            const client = new MongoClient('mongodb://mongo:27017');
             try {
                 await client.connect();
                 const db = client.db('EventDB');
 
-                var timeline = await db.collection('Events').aggregate([
+                var timeline = await db.collection('events').aggregate([
                     { $unwind : "$events" },
                     { $addFields: { custom_data: { $arrayToObject: "$events.custom_data" } } },
                     { 

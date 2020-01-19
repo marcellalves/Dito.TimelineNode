@@ -8,19 +8,15 @@ services:
     ports:
         - "27017:27017"
     restart: always
-  mongo_seed:
-    build: ./mongo_seed
-    volumes:
-        - ./events/events.json:/usr/bin/events.json
-    depends_on:
-      - mongo
   dito.timelinenode:
     image: dito.timelinenode
     build: .
     environment:
-      NODE_ENV: production
+      NODE_ENV: development
     ports:
       - 3000:3000
+      - 9229:9229
+    command: node --inspect=0.0.0.0:9229 ./bin/www
     depends_on:
       - mongo
     env_file:

@@ -10,7 +10,6 @@ A solução foi pensada como um passo intermediário em uma pipeline de extraç�
 # Arquitetura da solução
 
 ![Desenho arquitetural da solução](https://drive.google.com/uc?export=view&id=18nVWj0Pwj4Kbi5JgJLaQ7lvOGjDM5OlA)
-![Desenho arquitetural da inclusão de eventos](https://drive.google.com/uc?export=view&id=10Zif_-u9k2HtMLK1lLt5ISKYxrRj3BRb)
 
 # Executando a aplicação
 
