@@ -37,6 +37,8 @@ function timelineRepo() {
                     { $sort: { timestamp: -1 } }
                 ]).toArray();
 
+                console.log('timelineRepo', timeline);
+
                 resolve(timeline);
                 client.close();
             } catch (error) {

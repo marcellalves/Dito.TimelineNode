@@ -1,10 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var eventRepo = require('../repos/eventRepo');
+var timelineRepo = require('../repos/timelineRepo');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('timeline!');
+  timelineRepo.loadTimeline().then(function(timeline){
+    res.json(timeline);
+  });
 });
 
 module.exports = router;
