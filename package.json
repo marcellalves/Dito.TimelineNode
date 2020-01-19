@@ -1,15 +1,16 @@
 {
   "name": "dito.timelinenode",
-  "version": "1.0.0",
-  "description": "Api de manipulação de dados para desafio do processo seletivo da Dito",
-  "main": "server.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node server js"
+    "start": "node ./bin/www"
   },
-  "author": "marcell.alves@gmail.com",
-  "license": "ISC",
   "dependencies": {
-    "mongodb": "^3.5.1",
-    "express": "^4.16.1"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "^2.0.4"
   }
 }
