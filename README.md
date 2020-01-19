@@ -9,14 +9,16 @@ A solução foi pensada como um passo intermediário em uma pipeline de extraç�
 
 # Arquitetura da solução
 
-![Desenho arquitetural da solução](https://drive.google.com/uc?export=view&id=1YXQn8oj70vfJNHywafRExHMC4Wv-sLVU)
+![Desenho arquitetural da solução](https://drive.google.com/uc?export=view&id=18nVWj0Pwj4Kbi5JgJLaQ7lvOGjDM5OlA)
 
 # Executando a aplicação
 
 ### 1 - Rodar os containers:
 No diretório raíz da aplicação, executar o comando:
-	- docker-compose up --build -d
+
+	docker-compose up
 
 ### 2 - Testar a recuperação dos dados:
 Abrir a url  no browser, ou executar um curl:
-	- curl http://localhost:9000/timeline
+
+	curl http://localhost:9000/timeline
