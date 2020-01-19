@@ -5,7 +5,7 @@ Para o problema proposto, considerando as condições de escalabilidade e tempo 
 - Api: NodeJs
 - Banco de dados local: MongoDB, utilizando os recursos de aggregate.
 
-A solução foi pensada como um passo intermediário em uma pipeline de extração / visualização de dados. Ao acessar o endpoint (http://localhost:9000/timeline) da aplicação, é feita uma carga dos dados de origem informados no pdf do desafio () para uma coleção do MongoDB. Caso a coleção já exista, ela será excluída e criada novamente. Dessa forma, temos uma operação atômica e imutável, que poderia rodar dentro de uma function em uma arquitetura serverless. A manipulação de dados fica a cargo dos recursos de aggregation do MongoDB, para melhor desempenho.
+A solução foi pensada como um passo intermediário em uma pipeline de extração / visualização de dados. Ao acessar o endpoint (http://localhost:9000/timeline) da aplicação, é feita uma carga dos dados de origem informados no pdf do desafio (https://storage.googleapis.com/dito-questions/events.json) para uma coleção do MongoDB. Caso a coleção já exista, ela será excluída e criada novamente. Dessa forma, temos uma operação atômica e imutável, que poderia rodar dentro de uma function em uma arquitetura serverless. A manipulação de dados fica a cargo dos recursos de aggregation do MongoDB, para melhor desempenho.
 
 # Arquitetura da solução
 
