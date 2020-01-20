@@ -32,7 +32,31 @@ function timelineRepo() {
                                 store: { $mergeObjects: "$store" },
                                 products: { $push: "$products" } } 
                     },
-                    { $sort: { timestamp: -1 } }
+                    { 
+                        $project: {
+                                _id: 0,
+                                timeline: {
+                                        timestamp: "$timestamp",
+                                        revenue: "$revenue.revenue",
+                                        transaction_id: "$_id",
+                                        store_name: "$store.store_name",
+                                        products: "$products"
+                                    }
+                            }
+                    },
+                    { $sort: { timestamp: -1 } },
+                    {
+                        $group: {
+                            _id: null,
+                            timeline: { $push: "$timeline" }
+                        }
+                    },
+                    {
+                        $project: {
+                                _id: 0,
+                                timeline: "$timeline"
+                            }
+                    }
                 ]).toArray();
 
                 console.log('timelineRepo', timeline);
