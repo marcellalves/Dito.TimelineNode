@@ -19,6 +19,8 @@ A solução foi pensada como um passo intermediário em uma pipeline de extraç�
 
 # Arquitetura da solução
 ![Desenho arquitetural da inclusão de eventos](https://drive.google.com/uc?export=view&id=10Zif_-u9k2HtMLK1lLt5ISKYxrRj3BRb)  
+<a href="https://drive.google.com/uc?export=view&id=10Zif_-u9k2HtMLK1lLt5ISKYxrRj3BRb"><img src="https://drive.google.com/uc?export=view&id=10Zif_-u9k2HtMLK1lLt5ISKYxrRj3BRb" style="width: 500px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
+
 
 # Executando a aplicação
 
